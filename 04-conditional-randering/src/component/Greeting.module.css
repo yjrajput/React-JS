@@ -1,0 +1,14 @@
+.heading{
+    color: darkcyan;
+}
+.para{
+    background-color: brown;
+    color: #fff;
+}
+.btn{
+    border: none;
+    background-color: cadetblue;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
