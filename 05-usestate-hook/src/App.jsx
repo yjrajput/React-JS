@@ -9,6 +9,8 @@ import ExampleTwo from './component/examples/ExampleTwo';
 import ExampleThree from './component/examples/ExampleThree';
 import Counter from './component/Counter';
 import TodoList from './component/TodoList';
+import UserProfile from './component/UserProfile';
+import ShopingList from './component/ShopingList';
 
 const App = () => {
   const [data, setData] = useState(0);
@@ -59,6 +61,8 @@ const App = () => {
         <ExampleThree/>
         <Counter/>
         <TodoList/>
+        <UserProfile/>
+        <ShopingList/>
     </div>
   )
 }
