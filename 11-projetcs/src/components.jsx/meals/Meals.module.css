@@ -1,0 +1,30 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+img{
+    max-width: 400px;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+.content-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.container{
+    transition: all linear 0.5s;
+}
+.container:hover{
+    scale: 1.1;
+} */
