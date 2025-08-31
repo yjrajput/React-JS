@@ -1,0 +1,17 @@
+.external-heading{
+  color: brown;
+  font-family: sans-serif;
+}
+.external-para{
+  font-size: 20px;
+  font-family: cursive;
+}
+.external-btn{
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: chocolate;
+  color: white;
+
+}
