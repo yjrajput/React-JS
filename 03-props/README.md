@@ -1,12 +1,22 @@
-# React + Vite
+## 📖 About React.js Props  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In React, **props (short for properties)** are used to **pass data from one component to another**.  
+They make components **dynamic and reusable** by allowing values to be customized when the component is used.  
 
-Currently, two official plugins are available:
+Props are **read-only**, meaning a component **cannot modify its own props** — they are immutable. Instead, they are controlled by the parent component, which passes them down to child components.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ✅ Key Points about Props  
+- 📦 Used to pass **data from parent to child** components  
+- 🔒 **Immutable** – cannot be changed inside the receiving component  
+- 🎛️ Make components **reusable and customizable**  
+- ⚡ Allow React apps to be more **dynamic and flexible**  
 
-## Expanding the ESLint configuration
+### 💡 Example: Using Props in React  
+```jsx
+import React from "react";
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+function Greeting(props) {
+  return <h1>Hello, {props.name}! 👋</h1>;
+}
+
+export default Greeting;
