@@ -1,12 +1,55 @@
-# React + Vite
+# ⚛️ React.js Context API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Overview
+The **Context API** is a feature in React that provides a way to share data across components **without prop drilling** (manually passing props through every level).  
 
-Currently, two official plugins are available:
+It is useful for managing **global state** such as themes, authentication, user settings, and language preferences.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Why Use Context API?
+- Eliminates **prop drilling**  
+- Centralized **global state management**  
+- Makes data accessible to deeply nested components  
+- Cleaner and more maintainable code  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ How It Works
+1. **Create a Context** → `React.createContext()`  
+2. **Provide the Context** → Wrap components with `Context.Provider`  
+3. **Consume the Context** → Use `useContext()` hook inside child components  
+
+---
+
+## 📂 Example
+
+```jsx
+import React, { createContext, useContext, useState } from "react";
+
+// 1. Create Context
+const UserContext = createContext();
+
+// 2. Provide Context
+const UserProvider = ({ children }) => {
+  const [user, setUser] = useState("Yuvraj");
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      {children}
+    </UserContext.Provider>
+  );
+};
+
+// 3. Consume Context
+const Profile = () => {
+  const { user } = useContext(UserContext);
+  return <h2>Welcome, {user} 👋</h2>;
+};
+
+const App = () => (
+  <UserProvider>
+    <Profile />
+  </UserProvider>
+);
+
+export default App;
