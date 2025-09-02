@@ -1,12 +1,22 @@
-# React + Vite
+# ⚛️ React Custom Hooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Custom Hooks in React allow you to **reuse logic across components** by extracting it into a separate function.  
+They start with the word **`use`** and can call other React hooks inside them.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Why Custom Hooks?
+- Reuse stateful logic across multiple components.  
+- Keep components **clean and readable**.  
+- Share logic without duplicating code.  
+- Improve maintainability and scalability.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📖 Syntax
+
+```jsx
+function useCustomHook() {
+  // useState, useEffect, or other hooks
+  return value;
+}
